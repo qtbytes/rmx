@@ -989,7 +989,7 @@ fn confirm_yes() -> Result<bool, Error> {
         })?;
 
     let response = response.trim().to_lowercase();
-    Ok(response == "y" || response == "yes")
+    Ok(response.is_empty() || response == "y" || response == "yes")
 }
 
 // ── Unlock mode ──────────────────────────────────────────────────────────
